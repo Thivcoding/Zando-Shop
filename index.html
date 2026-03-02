@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Zando</title>
+
+    <!-- link bootstrap css -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <!-- script js bootstrap -->
+    <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- link cdn icon bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang:wght@100;300;400;700;900&family=Bayon&family=Bebas+Neue&family=Bokor&family=Dangrek&family=Fasthand&family=Moul&family=Preahvihear&family=Siemreap&family=Taprom&display=swap" rel="stylesheet">
+
+    <!-- all link file css -->
+    <!-- link header css -->
+    <link rel="stylesheet" href="./style/header.css">
+    <!-- link banner css -->
+    <link rel="stylesheet" href="./style/banner.css">
+    <!-- link footer css -->
+    <link rel="stylesheet" href="./style/footer.css">
+
+</head>
+<body>
+    <!-- header -->
+    <header class="container-fluid position-sticky top-0 z-3 bg-light p-0">
+        <nav id="nav-top" class="container navbar px-3 px-lg-0 p-0">
+            <!-- menu -->
+            <ul class="nav d-none d-lg-flex">
+                <li class="nav-item">
+                    <a href="#women" class="nav-link text-dark fw-bold">នារី</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#men" class="nav-link text-dark fw-bold">បុរស</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link text-dark fw-bold">ក្មេងប្រុស</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link text-dark fw-bold">ក្មេងស្រី</a>
+                </li>
+            </ul>
+            <!-- logo and icon login register -->
+            <div class="navbar gap-5">
+                <!-- logo -->
+                <a href="" class="fs-2 navbar-brand fw-bold me-5 p-0">ZANDO</a>
+                <div class="navbar d-none d-lg-flex gap-3">
+                    <!-- search input -->
+                    <input type="text" placeholder="ស្វែងរក" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"
+                           class="form-control shadow-none px-3" style="width: 40%;">
+                    <!-- icon -->
+                    <i class="bi bi-heart fs-5" style="cursor: pointer;"></i>
+                    <i class="bi bi-bag fs-5" style="cursor: pointer;"></i>
+                    <!-- button login and register -->
+                    <button class="btn btn-primary">ចូលគណនា</button>
+                    <button class="btn btn-primary">ចុះឈ្មោះ</button>
+                </div>
+            </div>
+            <!-- icon sidebar -->
+            <div class="d-flex d-lg-none align-items-center gap-3">
+                <i class="bi bi-search fs-3 d-flex d-lg-none" 
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop"></i>
+                <i class="bi bi-bag fs-3 d-flex d-lg-none"></i>
+                <i class="bi bi-list fs-1 d-flex d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#sidbar"></i>
+            </div>
+        </nav>
+
+        <nav id="nav-bottom" class="d-flex align-items-center 
+            justify-content-center text-danger fw-bold">
+            ចំណាយ​ចាប់ពី 40$ FREE សេវាដឹកជញ្ជូន!
+        </nav>
+
+        <!-- sidebar -->
+        <div class="offcanvas w-75 d-lg-none offcanvas-start bg-light" data-bs-scroll="true" tabindex="-1" id="sidbar" aria-labelledby="offcanvasWithBothOptionsLabel">
+            
+            <div class="offcanvas-header border-bottom" style="height: 9vh;">
+                <h2 class="text-dark fw-bold m-0">ZANDO.</h2>
+                <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body p-0">
+                <ul class="nav flex-column">
+                    <li class="nav-item py-3"><a href="" class="nav-link text-dark fs-4">
+                        Home</a>
+                    </li>
+                    <li class="nav-item py-3">
+                        <a href="" class="nav-link text-dark fs-4">About Us</a>
+                    </li>
+                    <li class="nav-item py-3">
+                        <a href="" class="nav-link text-dark fs-4">Service</a>
+                    </li>
+                    <li class="nav-item py-3">
+                        <a href="" class="nav-link text-dark fs-4">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- modal search -->
+        <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+            <div class="container">
+                <div class="offcanvas-header ps-0 pt-5 pb-3 border-bottom border-dark">
+                    <input type="text" class="form-control ps-0 fs-5 shadow-none border-0" 
+                        placeholder="ស្វែងរកទំនិញ...">
+                    <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- main-content -->
+    <main>
+        <!-- banner -->
+        <div class="container-fluid p-0">
+            <div id="banner-image" class="container p-0 position-relative">
+                <img src="./assets/image/banner.jpg" class="w-100 h-100 object-fit-cover" alt="banner-image">
+                <!-- container-button -->
+                <div id="main-btn-shop" class="position-absolute w-100 d-flex justify-content-center pb-4 pb-md-0">
+                    <button id="btn-shop" class="btn mx-2 py-md-2 px-md-4 text-light border-3 border-light">SHOP MEN</button>
+                    <button id="btn-shop" class="btn mx-2 py-md-2 px-md-4 text-light border-3 border-light">SHOP WOMEN</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- logo company -->
+        <div class="container d-flex overflow-hidden overflow-x-scroll py-2 px-0">
+            <img id="logo-company" src="./assets/icon/Zando_Web-1.png" alt="">
+            <img id="logo-company" src="./assets/icon/Ten11_Web-1.png" alt="">
+            <img id="logo-company" src="./assets/icon/361_Web-1.png" alt="">
+            <img id="logo-company" src="./assets/icon/Sisburma_Web-1.png" alt="">
+            <img id="logo-company" src="./assets/icon/Routine_Web-1.png" alt="">
+            <img id="logo-company" src="./assets/icon/TagSpace_Web-1.png" alt="">
+        </div>
+
+        <!-- curosel banner -->
+        <div id="carosel-banner" class="container bg-secondary p-0">
+            <div id="carouselExampleAutoplaying" class="carousel slide h-100" data-bs-ride="carousel">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                        <img src="./assets/image/carosel-banner-3.jpg" class="d-block h-100 w-100" alt="...">
+                    </div>
+                    <div class="carousel-item h-100">
+                         <img src="./assets/image/carosel-banner-4.jpg" class="d-block h-100 w-100" alt="...">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="./assets/image/carosel-banner-2.jpg" class="d-block h-100 w-100" alt="...">
+                    </div>
+                    <div class="carousel-item h-100">
+                        <img src="./assets/image/carosel-banner-1.jpg" class="d-block h-100 w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- best saller item -->
+        <div class="container pt-5">
+            <!-- title -->
+            <h2 class="fw-bolder">BEST SALLER ITEMS 🔥</h2>
+
+            <!-- main-card -->
+            <div class="container row m-auto py-3 p-0">
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2026-01/2112509763/PTAK5573.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2025-10/12225061418/ZD__2719.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2026-01/2112509763/PTAK5573.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2025-10/12225061418/ZD__2719.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MEN PRODUCT -->
+        <div id="men" class="container pt-5">
+            <!-- title -->
+            <h2 class="fw-bolder">MEN PRODUCT</h2>
+
+            <!-- main-card -->
+            <div class="container row m-auto py-3 p-0">
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0 p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2026-01/2112509763/PTAK5573.jpg" 
+                                    class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2026-01/2112509763/PTAK5573.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2026-01/2112509763/PTAK5573.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2026-01/2112509763/PTAK5573.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- WOMEN PRODUCT -->
+        <div id="women" class="container pt-5">
+            <!-- title -->
+            <h2 class="fw-bolder">WOMEN PRODUCTS</h2>
+
+            <!-- main-card -->
+            <div class="container row m-auto py-3 p-0">
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0 p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2025-10/12225061418/ZD__2719.jpg" 
+                                    class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2025-10/12225061418/ZD__2719.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2025-10/12225061418/ZD__2719.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- card -->
+                <div class="col-12 col-md-6 col-lg-3 mb-4" style="height: 550px;">
+                    <div class="card h-100">
+                        <div class="card-header position-relative p-0" style="height: 75%;">
+                            <img src="https://zandokh.com/image/catalog/products/2025-10/12225061418/ZD__2719.jpg" class="w-100 h-100 object-fit-cover " alt="">
+                            <button class="btn btn-danger py-0 fw-bold position-absolute" 
+                                    style="left: 20px; top: 20px;">-15%</button>
+                        </div>
+                        <div class="card-body" style="height: 25%;">
+                            <!-- price and icon -->
+                            <div class="d-flex justify-content-between">
+                                <!-- price -->
+                                <h5 class="text-danger">US $11.55 
+                                    <del class="text-secondary">US $ 99.99</del>
+                                </h5>
+                                <!-- icon -->
+                                <i class="bi bi-heart"></i>
+                            </div>
+                            <!-- title -->
+                             <h5>Product Title</h5>
+                            <!-- button -->
+                            <div class="d-flex justify-content-between">
+                                <button class="btn col-7 btn-primary">Add To Cart</button>
+                                <button class="btn btn-success">Buy Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map & Contact -->
+        <div class="container-fluid py-4">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <!-- main-container -->
+            <div class="container row m-auto p-0">
+                <!-- map -->
+                <div class="col-12 col-md-6 mb-4">
+                    <iframe class="rounded-4 border border-3 border-primary" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3537.3106115845835!2d104.88799717452689!3d11.562217244209522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951adb4d4041d%3A0x8a90e729f62ad800!2sETEC%20Center!5e1!3m2!1sen!2skh!4v1771993264155!5m2!1sen!2skh" width="100%" height="480" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <!-- form contact -->
+                <div class="col-12 col-md-6 mb-4">
+                    <form class="border border-3 border-primary rounded-4 p-5 h-100">
+                        <div class="mb-4">
+                            <input type="text" class="form-control shadow-none fs-5 py-2"
+                            placeholder="Your name"
+                            >
+                        </div>
+                        <div class="mb-4">
+                            <input type="email" class="form-control shadow-none fs-5 py-2"
+                            placeholder="Your email address"
+                            >
+                        </div>
+                        <div class="mb-4">
+                            <textarea rows="4" class="form-control shadow-none fs-5 p-3"
+                            placeholder="Your message"
+                            ></textarea>
+                        </div>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary w-100 btn-lg">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="container-fluid border-top p-0">
+        <div class="container p-0">
+            <!-- media -->
+            <div class="container row m-auto py-5 p-0">
+                <div class="col-12 col-md-4">
+                    <h2 class="fw-bold pb-3">Zando Shop</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A voluptatibus adipisci similique tempore recusandae minus omnis, quos dignissimos ratione consectetur saepe, reiciendis, labore neque rerum.</p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h2 class="fw-bold pb-3">Get In Touch</h2>
+                    <p class="m-0 pb-1">Address : Etec Center & Khu IT Solution </p>
+                    <p class="m-0 pb-1">Email : eteccenter@gmail.com</p>
+                    <p class="m-0 pb-1">Phone Number : 885#123456789 </p>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h2 class="fw-bold py-3 pb-md-3">Newsleter</h2>
+                    <p class="m-0 pb-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi aut consequuntur officia.</p>
+                    <input id="email-form" type="text" class="form-control shadow-none bg-primary text-light py-3" 
+                    placeholder="Your email address">
+                </div>
+
+            </div>
+        </div>
+        <!-- info build -->
+        <h5 class="text-center py-4 m-0 px-3" style="background-color: rgb(214, 214, 214);">
+            &copy; Zando Shop . All Right Reserverd | Build By HOK VANTHIV
+        </h5>
+    </footer>
+</body>
+</html>
